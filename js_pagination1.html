@@ -2,7 +2,6 @@
 
 
 
-
 <style  type="text/css">
 
 #canvas {
@@ -14,7 +13,8 @@
 }
 
 
- body {background-color: #154360;
+ 
+  body {background-color: #154360;
 
         } 
 
@@ -53,7 +53,6 @@
 
 
     </head>
-
 
 
 
@@ -101,6 +100,8 @@
 
 
 
+
+
 <div class="post" id="page2">
    
 
@@ -131,7 +132,6 @@
 <canvas id="canvas11" width="270" height="550" style=" margin-left:527px; margin-top:-164px; "></canvas>
 
 <br></br>
-
 
 
 
@@ -193,6 +193,7 @@
 <script>
 
 
+  
 function draw_diamond(size, x, y, str, arg1, arg2, arg3) {
 
 
@@ -233,8 +234,6 @@ canvas.closePath();
 
 
 
-
-
 draw_diamond(100, 100, 100, '#canvas1', "  #1f618d", 35, " #1f618d");
 
 draw_diamond(100, 100, 100, '#canvas2', "  #1f618d", 35, " #1f618d");
@@ -248,7 +247,8 @@ draw_diamond(100, 100, 100, '#canvas5', " #1f618d", 35, " #1f618d");
 
 
 
-draw_diamond(100, 100, 100, '#canvas7', " #1f618d", 35, " #2781a5");
+
+ draw_diamond(100, 100, 100, '#canvas7', " #1f618d", 35, " #2781a5");
 
 draw_diamond(100 ,100, 100, '#canvas8', "#1f618d", 35, "#2781a5");
 
@@ -261,6 +261,7 @@ draw_diamond(100, 100, 100, '#canvas11', "#1f618d", 35, "#2781a5");
 
 
 
+  
 draw_diamond(100, 100, 100, '#canvas15', " #1f618d", 35,   "#3095be");
 
 draw_diamond(100 ,100, 100, '#canvas17', "#1f618d", 35, "#3095be");
@@ -270,7 +271,6 @@ draw_diamond(100, 100, 100, '#canvas21', "#1f618d", 35, "#3095be");
 draw_diamond(100, 100, 100, '#canvas25', "#1f618d", 35, "#3095be");
 
 draw_diamond(100, 100, 100, '#canvas27', "#1f618d", 35, "#3095be");
-
 
 
 
@@ -301,7 +301,8 @@ function prevPage() {
     showPage(page);
 }
 
-function nextPage() {
+
+  function nextPage() {
     if (page == $('.pagination .post').length) {
         page = 1;
     } else {
@@ -310,7 +311,8 @@ function nextPage() {
     showPage(page);
 }
 
-$(document).ready(function() {
+
+  $(document).ready(function() {
     showPage(page);
     
     $('#prev').click(prevPage);
@@ -321,7 +323,5 @@ $(document).ready(function() {
 </script>
 
 </body>
-
-
 
 </html>
