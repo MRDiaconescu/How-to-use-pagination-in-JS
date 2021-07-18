@@ -1,0 +1,329 @@
+
+
+
+
+
+<style  type="text/css">
+
+#canvas {
+  width: 270px;
+  height: 550px;
+  padding: 20px;
+  margin-left: 870px;
+
+}
+
+
+ body {background-color: #154360;
+
+        } 
+
+
+ /* Pagination links */
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Add a white background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #FFFFFF;} 
+
+
+</style>
+
+
+
+
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="library.js"> </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+    </head>
+
+
+
+
+<body onload='draw_diamond()';>
+
+
+<div class="pagination">
+    <div class="post" id="page1"> 
+
+
+
+<canvas id="canvas" width="270" height="550" style=" margin-left:57px; margin-top:57px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas1" width="270" height="550" style=" margin-left:78px; margin-top:-165px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas2" width="270" height="550" style=" margin-left:527px; margin-top:-986px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas3" width="270" height="550" style="margin-left:527px; margin-top:-576px; "></canvas>
+
+
+<canvas id="canvas4" width="270" height="550" style="margin-left:976px; margin-top:-576px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas5" width="270" height="550" style=" margin-left:527px; margin-top:-164px; "></canvas>
+
+<br></br>
+
+</div>
+
+
+<br></br>
+<br></br>
+<br></br>
+
+
+
+<div class="post" id="page2">
+   <!--      <h3> head2 </h3>
+        <p> Test2 </p> -->
+
+
+<canvas id="canvas6" width="270" height="550" style=" margin-left:57px; margin-top:57px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas7" width="270" height="550" style=" margin-left:78px; margin-top:-234px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas8" width="270" height="550" style=" margin-left:527px; margin-top:-986px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas9" width="270" height="550" style="margin-left:527px; margin-top:-576px; "></canvas>
+
+
+<canvas id="canvas10" width="270" height="550" style="margin-left:976px; margin-top:-576px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas11" width="270" height="550" style=" margin-left:527px; margin-top:-164px; "></canvas>
+
+<br></br>
+
+
+
+
+</div>
+
+
+
+
+
+<div class="post" id="page3">
+   <!--      <h3> head2 </h3>
+        <p> Test2 </p> -->
+
+
+<canvas id="canvas12" width="270" height="550" style=" margin-left:57px; margin-top:57px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas15" width="270" height="550" style=" margin-left:78px; margin-top:-234px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas17" width="270" height="550" style=" margin-left:527px; margin-top:-986px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas21" width="270" height="550" style="margin-left:527px; margin-top:-576px; "></canvas>
+
+
+<canvas id="canvas25" width="270" height="550" style="margin-left:976px; margin-top:-576px; "></canvas>
+
+<br></br>
+
+
+<canvas id="canvas27" width="270" height="550" style=" margin-left:527px; margin-top:-164px; "></canvas>
+
+<br></br>
+
+
+
+</div>
+
+
+
+
+
+
+<a href="#" id="prev">Prev page</a>
+<a href="#" id="next">Next page</a>
+
+   
+</div>
+
+
+
+
+<script>
+
+
+function draw_diamond(size, x, y, str, arg1, arg2, arg3) {
+
+
+var canvas = document.querySelector(str).getContext('2d'),side = 0,
+    size = size,
+    x = x,
+    y = y;
+
+
+
+canvas.beginPath();
+
+
+
+canvas.moveTo(x + size * Math.cos(0), y + size * Math.sin(0));
+
+for (side; side < 5; side++) {
+  canvas.lineTo(x + size * Math.cos(side * 2 * Math.PI / 4), y + size * Math.sin(side * 2 * Math.PI / 4));
+}
+
+
+
+canvas.shadowColor =  arg1;
+canvas.shadowBlur = arg2;
+canvas.shadowOffsetX = 0;
+canvas.shadowOffsetY = 0;
+
+canvas.fillStyle = arg3;
+canvas.fill();
+
+canvas.closePath();
+
+
+
+
+}
+
+
+
+
+
+
+draw_diamond(100, 100, 100, '#canvas1', "  #1f618d", 35, " #1f618d");
+
+draw_diamond(100, 100, 100, '#canvas2', "  #1f618d", 35, " #1f618d");
+
+draw_diamond(100, 100, 100, '#canvas3', " #1f618d", 35, " #1f618d");
+
+draw_diamond(100, 100, 100, '#canvas4',  " #1f618d" , 35, " #1f618d");
+
+draw_diamond(100, 100, 100, '#canvas5', " #1f618d", 35, " #1f618d");
+
+
+
+
+draw_diamond(100, 100, 100, '#canvas7', " #1f618d", 35, " #2781a5");
+
+draw_diamond(100 ,100, 100, '#canvas8', "#1f618d", 35, "#2781a5");
+
+draw_diamond(100, 100, 100, '#canvas9', "#1f618d", 35, "#2781a5");
+
+draw_diamond(100, 100, 100, '#canvas10', "#1f618d", 35, "#2781a5");
+
+draw_diamond(100, 100, 100, '#canvas11', "#1f618d", 35, "#2781a5");
+
+
+
+
+draw_diamond(100, 100, 100, '#canvas15', " #1f618d", 35,   "#3095be");
+
+draw_diamond(100 ,100, 100, '#canvas17', "#1f618d", 35, "#3095be");
+
+draw_diamond(100, 100, 100, '#canvas21', "#1f618d", 35, "#3095be");
+
+draw_diamond(100, 100, 100, '#canvas25', "#1f618d", 35, "#3095be");
+
+draw_diamond(100, 100, 100, '#canvas27', "#1f618d", 35, "#3095be");
+
+
+
+
+
+
+function myFunction(arg1) {
+  var x = document.getElementById(arg1);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+var page = 1;
+
+function showPage(page) {
+    $('.pagination .post:not(#page'+page+')').hide();
+    $('.pagination .post#page'+page).show();
+}
+
+function prevPage() {
+    if (page == 1) {
+        page = $('.pagination .post').length;
+    } else {
+        page--;
+    }
+    showPage(page);
+}
+
+function nextPage() {
+    if (page == $('.pagination .post').length) {
+        page = 1;
+    } else {
+        page++;
+    }
+    showPage(page);
+}
+
+$(document).ready(function() {
+    showPage(page);
+    
+    $('#prev').click(prevPage);
+    $('#next').click(nextPage);
+});
+
+
+</script>
+
+</body>
+
+
+
+</html>
